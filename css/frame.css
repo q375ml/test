@@ -1,0 +1,535 @@
+@charset "UTF-8";
+/* line 6, ../sass/frame/__reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 26, ../sass/frame/__reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 30, ../sass/frame/__reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 34, ../sass/frame/__reset.scss */
+ul, ol {
+  list-style: none;
+}
+
+/* line 37, ../sass/frame/__reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, ../sass/frame/__reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../sass/frame/__reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* line 54, ../sass/frame/__reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 60, ../sass/frame/__reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 66, ../sass/frame/__reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 69, ../sass/frame/__reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 73, ../sass/frame/__reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 78, ../sass/frame/__reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 86, ../sass/frame/__reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 89, ../sass/frame/__reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+/* line 1, ../sass/frame/_layouts.scss */
+html, body {
+  height: 100%;
+  font-family: Arial,"微軟正黑體";
+  color: #4a4a4a;
+  font-size: 1rem;
+  line-height: 140%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 11, ../sass/frame/_layouts.scss */
+body {
+  width: 100%;
+}
+
+/* line 14, ../sass/frame/_layouts.scss */
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 19, ../sass/frame/_layouts.scss */
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* line 23, ../sass/frame/_layouts.scss */
+.crop {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 100%;
+}
+/* line 209, ../sass/define/___mixins.scss */
+.crop img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+/* line 25, ../sass/frame/_layouts.scss */
+.crop a {
+  display: block;
+}
+
+/* line 29, ../sass/frame/_layouts.scss */
+.inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 33, ../sass/frame/_layouts.scss */
+.hide {
+  display: none;
+}
+
+/* line 18, ../sass/define/___mixins.scss */
+.container, .clearfix {
+  zoom: 1;
+}
+/* line 21, ../sass/define/___mixins.scss */
+.container:after, .clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 39, ../sass/frame/_layouts.scss */
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+}
+@media only screen and (max-width: 980px) {
+  /* line 39, ../sass/frame/_layouts.scss */
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 47, ../sass/frame/_layouts.scss */
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+  /* line 55, ../sass/frame/_layouts.scss */
+  .hidden-pad {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 981px) {
+  /* line 60, ../sass/frame/_layouts.scss */
+  .hidden-desktop {
+    display: none;
+  }
+}
+
+/* line 65, ../sass/frame/_layouts.scss */
+.col-left {
+  float: left;
+}
+
+/* line 68, ../sass/frame/_layouts.scss */
+.col-right {
+  float: right;
+}
+
+/* line 71, ../sass/frame/_layouts.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 74, ../sass/frame/_layouts.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 77, ../sass/frame/_layouts.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 80, ../sass/frame/_layouts.scss */
+.red {
+  color: #e30c0c;
+}
+
+/* line 83, ../sass/frame/_layouts.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 86, ../sass/frame/_layouts.scss */
+.text-hide {
+  text-indent: -9999px;
+}
+
+/* line 89, ../sass/frame/_layouts.scss */
+.font-12 {
+  font-size: 0.75rem;
+}
+
+/* line 92, ../sass/frame/_layouts.scss */
+.font-13 {
+  font-size: 0.813rem;
+}
+
+/* line 95, ../sass/frame/_layouts.scss */
+.font-14 {
+  font-size: 0.875rem;
+}
+
+/* line 98, ../sass/frame/_layouts.scss */
+.font-15 {
+  font-size: 0.9375rem;
+}
+
+/* line 101, ../sass/frame/_layouts.scss */
+.font-16 {
+  font-size: 1rem;
+}
+
+/* line 104, ../sass/frame/_layouts.scss */
+.font-17 {
+  font-size: 1.063rem;
+}
+
+/* line 107, ../sass/frame/_layouts.scss */
+.font-18 {
+  font-size: 1.125rem;
+}
+
+/* line 110, ../sass/frame/_layouts.scss */
+.font-20 {
+  font-size: 1.25rem;
+}
+
+/* line 113, ../sass/frame/_layouts.scss */
+.font-22 {
+  font-size: 1.375rem;
+}
+
+/* line 116, ../sass/frame/_layouts.scss */
+.font-24 {
+  font-size: 1.5rem;
+}
+
+/* line 119, ../sass/frame/_layouts.scss */
+.font-30 {
+  font-size: 1.875rem;
+}
+
+/* line 122, ../sass/frame/_layouts.scss */
+.font-36 {
+  font-size: 2.25rem;
+}
+
+/* line 125, ../sass/frame/_layouts.scss */
+.delay-Ofive {
+  animation-delay: 0.5s;
+}
+
+/* line 128, ../sass/frame/_layouts.scss */
+.delay-oneOfive {
+  animation-delay: 1.5s;
+}
+
+/* line 131, ../sass/frame/_layouts.scss */
+.delay-one {
+  animation-delay: 1s;
+}
+
+/* line 134, ../sass/frame/_layouts.scss */
+.delay-two {
+  animation-delay: 2s;
+}
+
+/* line 137, ../sass/frame/_layouts.scss */
+.delay-three {
+  animation-delay: 3s;
+}
+
+/* line 140, ../sass/frame/_layouts.scss */
+.delay-four {
+  animation-delay: 4s;
+}
+
+/* line 143, ../sass/frame/_layouts.scss */
+.delay-five {
+  animation-delay: 5s;
+}
+
+/* line 146, ../sass/frame/_layouts.scss */
+.delay-seven {
+  animation-delay: 7s;
+}
+
+/* line 151, ../sass/frame/_layouts.scss */
+.repeat {
+  animation-iteration-count: infinite;
+}
+
+/* line 155, ../sass/frame/_layouts.scss */
+.repeat-one {
+  animation-duration: 1s !important;
+  animation-iteration-count: infinite;
+}
+
+/* line 159, ../sass/frame/_layouts.scss */
+.repeat-two {
+  animation-duration: 2s !important;
+  animation-iteration-count: infinite;
+}
+
+/* line 164, ../sass/frame/_layouts.scss */
+.repeat-three {
+  animation-duration: 3s !important;
+  animation-iteration-count: infinite;
+}
+
+/* line 168, ../sass/frame/_layouts.scss */
+.repeat-four {
+  animation-duration: 4s !important;
+  animation-iteration-count: infinite;
+}
+
+/* line 172, ../sass/frame/_layouts.scss */
+.repeat-five {
+  animation-duration: 5s !important;
+  animation-iteration-count: infinite;
+}
+
+/* line 176, ../sass/frame/_layouts.scss */
+.repeat-six {
+  animation-duration: 6s !important;
+  animation-iteration-count: infinite;
+}
+
+/* line 180, ../sass/frame/_layouts.scss */
+.br {
+  display: block;
+}
+
+/* line 183, ../sass/frame/_layouts.scss */
+.d-show {
+  display: none;
+}
+
+@media only screen and (min-width: 981px) {
+  /* line 187, ../sass/frame/_layouts.scss */
+  .d-br {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+  /* line 192, ../sass/frame/_layouts.scss */
+  .p-br {
+    display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 197, ../sass/frame/_layouts.scss */
+  .m-br {
+    display: block;
+  }
+}
+/* line 1, ../sass/frame/_icon.scss */
+.icon-block1 {
+  margin-right: 10px;
+}
+/* line 39, ../sass/define/___background.scss */
+.icon-block1 {
+  position: relative;
+}
+/* line 42, ../sass/define/___background.scss */
+.icon-block1:before {
+  content: ".";
+  height: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: url(../images/icons.png);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: absolute;
+}
+@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (max--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  /* line 60, ../sass/define/___background.scss */
+  .icon-block1:before {
+    background-image: url(../images/icons@2x.png);
+    background-size: 800px 800px;
+  }
+}
+/* line 23, ../sass/define/___background.scss */
+.icon-block1:before {
+  width: 42px;
+  padding-top: 42px;
+  background-position: 0px 0px;
+  top: -1px;
+  left: 0px;
+}
+
+/* line 6, ../sass/frame/_icon.scss */
+[class^="icon-"]:before,
+[class*="icon-"]:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+}
+
+/* line 2, ../sass/frame/_header.scss */
+.header {
+  background-color: white;
+  -webkit-box-shadow: 0 2px 5px #ccc;
+  -moz-box-shadow: 0 2px 5px #ccc;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 20px 100px;
+  width: 100%;
+  z-index: 4;
+}
+/* line 18, ../sass/define/___mixins.scss */
+.header {
+  zoom: 1;
+}
+/* line 21, ../sass/define/___mixins.scss */
+.header:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 9, ../sass/frame/_header.scss */
+.header .logo {
+  display: block;
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  -ms-transition: all 0.15s;
+  transition: all 0.15s;
+  width: 189px;
+}
+/* line 14, ../sass/frame/_header.scss */
+.header img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+  /* line 19, ../sass/frame/_header.scss */
+  .header {
+    padding: 20px 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 36, ../sass/frame/_header.scss */
+  .header {
+    padding: 10px;
+  }
+  /* line 38, ../sass/frame/_header.scss */
+  .header .logo {
+    width: 40vw;
+  }
+}
