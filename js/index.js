@@ -5,13 +5,17 @@ $(window).scroll(function(evt){
       $(".navbar").addClass("navbar-top");
 });
 
-var s = skrollr.init();
+var s = skrollr.init({
+	mobileCheck: function() {
+	  return false;
+	}
+});
 
-if($(window)<768){
+// if($(window)<768){
    
-  var s = skrollr.init({
-    mobileCheck: function() {
-      return false;
-    }
-  });
-}
+//   var s = skrollr.init({
+//     mobileCheck: function() {
+//       return false;
+//     }
+//   });
+// }
