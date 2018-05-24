@@ -6,3 +6,12 @@ $(window).scroll(function(evt){
 });
 
 var s = skrollr.init();
+
+if($(window)<768){
+   
+  var s = skrollr.init({
+    mobileCheck: function() {
+      return false;
+    }
+  });
+}
